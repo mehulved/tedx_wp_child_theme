@@ -1,0 +1,96 @@
+/*
+ * Theme Name: TEDx
+ * Description: Theme for TEDx events
+ * Author: Mehul Ved
+ * Author URI: http://mehulved.com/
+ * Template: wp-foundation
+ * Version: 0.1
+ * License: GPL
+ */
+
+@import url("../wp-foundation/style.css");
+
+.top-nav {
+    background-color: #FF2A06 !important;
+}
+
+.nav-bar > li {
+    border: none;
+}
+
+.nav-bar > li:last-child {
+    border-right: none;
+}
+
+.nav-bar > li:hover {
+    background: none;
+}
+
+.nav-bar > li.active:hover {
+    background: none;
+    border: none;
+} 
+
+.nav-bar > li.active {
+    background: none;
+}
+
+.nav-bar > li:hover, .nav-bar > li.active:hover {
+    border-color: #FF2A06;
+    border-right-style: outset;
+    border-bottom-style: inset;
+}
+
+#menu-nav-menu > li > a {
+        color: #FFFFFF;
+}
+
+ul.tabs.vertical > li > a {
+    background-color: #FF2A06;
+    color: #FFFFFF;
+}
+
+.sidebar-list {
+    list-style-type: none;
+}
+
+.sidebar-list > li {
+    margin-bottom: 20px;
+}
+
+.sidebar-list > li > h2 {
+    font-size: 15px;
+    color: #000000;
+    font-weight: bold;
+    font-family: arial, helvetica, sans-serif;
+}
+
+#sm_sidebar > div > a {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#search {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    -moz-border-radius-topleft: 20px;
+    -moz-border-radius-bottomleft: 20px;
+}
+
+#search-submit {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    -moz-border-radius-topright: 20px;
+    -moz-border-radius-bottomright: 20px;
+    background-color: #FF2A06;
+    width: 72px;
+}
+
+p a, p a:hover {
+    color: #802A1B;
+}
+
+p a:visited {
+    color: #FF2B06;
+}
+
