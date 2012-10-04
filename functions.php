@@ -29,41 +29,42 @@ function tedx_options_page() {
             <label for="youtube">Youtube URL:</label> <input type="text" name="tedx_yt_url" id="yt_options" value="<?php echo get_option('tedx_yt_url'); ?>" />
             </p>
             <div id="image_slider">
+		$slider_images = get_option('tedx_slider_images');
                 <h3>Image Slider</h3>
                 <p>Upload/Select Images that you want to display on the slider. Dimension: 970px x 370px</p>
                 <p id="slider1" class="slider">
                     <label for="upload_image1">
                         Image 1:
                     </label>
-                    <input type="text" id="upload_image1_text" size="36" name="upload_image[]" value="<?php echo get_option('tedx_slider_images')[0]; ?>" />
+                    <input type="text" id="upload_image1_text" size="36" name="upload_image[]" value="<?php echo $slider_images[0]; ?>" />
                     <input type="button" id="upload_image1" class="upload_button" value="Upload Image" />
                 </p>
                 <p id="slider2" class="slider">
                     <label for="upload_image2">
                         Image 2:
                     </label>
-                    <input type="text" id="upload_image2_text" size="36" name="upload_image[]" value="<?php echo get_option('tedx_slider_images')[1]; ?>" />
+                    <input type="text" id="upload_image2_text" size="36" name="upload_image[]" value="<?php echo $slider_images[1]; ?>" />
                     <input type="button" id="upload_image2" class="upload_button" value="Upload Image" />
                 </p>
                 <p id="slider3" class="slider">
                     <label for="upload_image3">
                         Image 3:
                     </label>
-                    <input type="text" id="upload_image3_text" size="36" name="upload_image[]" value="<?php echo get_option('tedx_slider_images')[2]; ?>" />
+                    <input type="text" id="upload_image3_text" size="36" name="upload_image[]" value="<?php echo $slider_images[2]; ?>" />
                     <input type="button" id="upload_image3" class="upload_button" value="Upload Image" />
                 </p>
                 <p id="slider4" class="slider">
                     <label for="upload_image4">
                         Image 4:
                     </label>
-                    <input type="text" id="upload_image4_text" size="36" name="upload_image[]" value="<?php echo get_option('tedx_slider_images')[3]; ?>" />
+                    <input type="text" id="upload_image4_text" size="36" name="upload_image[]" value="<?php echo $slider_images[3]; ?>" />
                     <input type="button" id="upload_image4" class="upload_button" value="Upload Image" />
                 </p>
                 <p id="slider5" class="slider">
                     <label for="upload_image5">
                         Image 5:
                     </label>
-                    <input type="text" id="upload_image5_text" size="36" name="upload_image[]" value="<?php echo get_option('tedx_slider_images')[4]; ?>" />
+                    <input type="text" id="upload_image5_text" size="36" name="upload_image[]" value="<?php echo $slider_images[4]; ?>" />
                     <input type="button" id="upload_image5" class="upload_button" value="Upload Image" />
                 </p>
             </div>
