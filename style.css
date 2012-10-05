@@ -10,10 +10,6 @@
 
 @import url("../wp-foundation/style.css");
 
-.top-nav {
-    background-color: #FF2A06 !important;
-}
-
 .nav-bar > li {
     border: none;
 }
@@ -41,10 +37,6 @@
     border-bottom-style: inset;
 }
 
-#menu-nav-menu > li > a {
-        color: #FFFFFF;
-}
-
 ul.tabs.vertical > li > a {
     background-color: #FF2A06;
     color: #FFFFFF;
@@ -60,7 +52,7 @@ ul.tabs.vertical > li > a {
 
 .sidebar-list > li > h2 {
     font-size: 15px;
-    color: #000000;
+    color: #FFFFFF;
     font-weight: bold;
     font-family: arial, helvetica, sans-serif;
 }
@@ -86,11 +78,11 @@ ul.tabs.vertical > li > a {
     width: 72px;
 }
 
-p a, p a:hover {
-    color: #802A1B;
+p a, p a:hover, p a:visited {
+    color: #FF2B06;
 }
 
-p a:visited {
-    color: #FF2B06;
+p a:hover {
+    text-decoration: underline;
 }
 
