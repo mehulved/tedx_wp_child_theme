@@ -29,7 +29,9 @@ function tedx_options_page() {
             <label for="youtube">Youtube URL:</label> <input type="text" name="tedx_yt_url" id="yt_options" value="<?php echo get_option('tedx_yt_url'); ?>" />
             </p>
             <div id="image_slider">
-		$slider_images = get_option('tedx_slider_images');
+            <?php
+            $slider_images = get_option('tedx_slider_images');
+            ?>
                 <h3>Image Slider</h3>
                 <p>Upload/Select Images that you want to display on the slider. Dimension: 970px x 370px</p>
                 <p id="slider1" class="slider">
