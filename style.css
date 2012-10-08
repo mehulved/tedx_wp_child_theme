@@ -86,3 +86,6 @@ p a:hover {
     text-decoration: underline;
 }
 
+#sidebar1 .panel {
+    background-color: black;
+}
