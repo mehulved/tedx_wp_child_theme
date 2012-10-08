@@ -122,6 +122,13 @@
 				border-bottom: none;
 			}';
 		}
+        $sidebar_background = get_option('tedx_sidebar_background');
+        if ($sidebar_background) {
+            $theme_options_styles .= '
+                #sidebar1 > .panel, #sidebar2 > .panel {
+                    background-color: ' . $sidebar_background . ';
+            }';
+        }
 						
 		if($theme_options_styles){
 			echo '<style>' 

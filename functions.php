@@ -19,6 +19,7 @@ function tedx_options_page() {
     <form method="POST" action="">
         <input type="hidden" name="update_themeoptions" value="true" />
         <div class="tedx-options">
+            <h3>Social Media</h3>
             <p id="twitter">
                 <label for="twitter">Twitter URL:</label> <input type="text" name="tedx_twitter_url" id="twitter_options" value="<?php echo get_option('tedx_twitter_url'); ?>" />
             </p>
@@ -27,6 +28,11 @@ function tedx_options_page() {
             </p>
             <p id="youtube">
             <label for="youtube">Youtube URL:</label> <input type="text" name="tedx_yt_url" id="yt_options" value="<?php echo get_option('tedx_yt_url'); ?>" />
+            </p>
+            <h3>Theme Colours</h3>
+            <p id="sidebar_background">
+                <label for="sidebar_background_colour">Sidebar Background Color:</label>
+                <input type="text" id="sidebar_background_colour" name="tedx_sidebar_background" value="<?php echo get_option('tedx_sidebar_background'); ?>" />
             </p>
             <div id="image_slider">
             <?php
@@ -84,6 +90,9 @@ function tedx_options_update() {
     }
     if ($_POST['tedx_yt_url'] != '') {
         update_option('tedx_yt_url', $_POST['tedx_yt_url']);
+    }
+    if ($_POST['tedx_sidebar_background'] != '') {
+        update_option('tedx_sidebar_background', $_POST['tedx_sidebar_background']);
     }
     update_option('tedx_slider_images', $_POST['upload_image']);
 }
