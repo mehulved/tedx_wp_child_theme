@@ -124,4 +124,36 @@ function embed_google_map( $matches ) {
     return apply_filters( 'embed_g_map', $embed );
 }
 
+add_action('init', 'tedx_speakers_custom_post_type');
+function tedx_speakers_custom_post_type() {
+    register_post_type('tedx_speakers',
+        array(
+            'labels' => array(
+                'name' => __('Speakers'),
+                'singular_name' => __('Speaker')
+            ),
+            'public' => true,
+            'has_archive' => false,
+            'rewrite' => array(
+                'slug' => 'speakers'
+            )
+        )
+    );
+}
+
+add_action('init', 'tedx_team_custom_post_type');
+function tedx_team_custom_post_type() {
+    register_post_type('tedx_team',
+        array(
+            'labels' => array(
+                'name' => __('Team')
+            ),
+            'public' => true,
+            'has_archive' => false,
+            'rewrite' => array(
+                'slug' => 'team'
+            )
+        )
+    );
+}
 ?>
