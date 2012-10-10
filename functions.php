@@ -130,9 +130,19 @@ function tedx_speakers_custom_post_type() {
         array(
             'labels' => array(
                 'name' => __('Speakers'),
-                'singular_name' => __('Speaker')
+                'all_items' => __('Speakers List'),
+                'add_new' => __('New Speaker'),
+                'edit_item' => __('Edit Speaker'),
+                'view_item' => __('View Speaker')
             ),
-            'public' => true,
+            'public' => false,
+            'show_ui' => true,
+            'menu_position' => 5,
+            'supports' => array(
+                'title',
+                'editor',
+                'thumbnail'
+            ),
             'has_archive' => false,
             'rewrite' => array(
                 'slug' => 'speakers'
@@ -146,9 +156,15 @@ function tedx_team_custom_post_type() {
     register_post_type('tedx_team',
         array(
             'labels' => array(
-                'name' => __('Team')
+                'name' => __('Team'),
+                'all_items' => __('Team Members'),
+                'add_new' => __('New Member'),
+                'edit_item' => __('Edit Member'),
+                'view_item' => __('View Member')
             ),
-            'public' => true,
+            'public' => false,
+            'show_ui' => true,
+            'menu_position' => 5,
             'has_archive' => false,
             'rewrite' => array(
                 'slug' => 'team'
