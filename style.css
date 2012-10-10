@@ -31,6 +31,10 @@
     background: none;
 }
 
+.nav-bar > li.active > a {
+    color: black !important;
+}
+
 .nav-bar > li:hover, .nav-bar > li.active:hover {
     border-color: #FF2A06;
     border-right-style: outset;
