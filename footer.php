@@ -8,7 +8,7 @@
 								<?php bones_footer_links(); ?>
 							</nav>
 
-							<p class="attribution three columns"><a href="http://github.com/mehulved/tedx_wp_child_theme" id="credit320" title="TEDx Wordpress Theme">TEDx Theme for Wordpress</a></p>
+							<p class="attribution three columns"><a href="http://github.com/mehulved/tedx_wp_child_theme" id="credit" title="TEDx Wordpress Theme">TEDx Theme for Wordpress</a></p>
 
 						</div>
 
