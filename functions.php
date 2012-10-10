@@ -165,6 +165,11 @@ function tedx_team_custom_post_type() {
             'public' => false,
             'show_ui' => true,
             'menu_position' => 5,
+            'supports' => array(
+                'title',
+                'editor',
+                'thumbnail'
+            ),
             'has_archive' => false,
             'rewrite' => array(
                 'slug' => 'team'
