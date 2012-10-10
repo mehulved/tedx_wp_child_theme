@@ -172,4 +172,10 @@ function tedx_team_custom_post_type() {
         )
     );
 }
+
+if ( function_exists('add_theme_support')) {
+    add_theme_support('post-thumbnail');
+    set_post_thumbnail_size(150,150);
+    add_image_size('medium',300,300);
+}
 ?>
