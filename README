@@ -1,3 +1,5 @@
 This is a child theme of wp-foundation by 320press. It can be availed from https://github.com/320press/wordpress-foundation. 
 This theme won't work without wp-foundation, so get that before activating this theme.
 
+To display list of speakers, create a page for speakers, select template Speakers from the edit page view. Then add speakers from the Speakers menu. Follow the same steps for team.
+
