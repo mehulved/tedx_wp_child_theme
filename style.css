@@ -35,6 +35,10 @@
     color: black !important;
 }
 
+.nav-bar > li.active > a:hover {
+    color: black !important;
+}
+
 .nav-bar > li:hover, .nav-bar > li.active:hover {
     border-color: #FF2A06;
     border-right-style: outset;
@@ -92,4 +96,12 @@ p a:hover {
 
 #main img.wp-smiley {
     margin: 0px;
+}
+
+.team-member {
+    border-bottom: red 1px solid;
+}
+
+.member-description {
+    text-align: justify;
 }
