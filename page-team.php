@@ -11,7 +11,7 @@
 				<div id="main" class="twelve columns clearfix" role="main">
 
                     <?php
-                    $args = array('post_type' => 'tedx_team', 'orderby' => 'date', 'order' => 'ASC');
+                    $args = array('post_type' => 'tedx_team', 'orderby' => 'date', 'order' => 'ASC', 'posts_per_page' => -1);
 
                     $loop = new WP_Query($args);
 
