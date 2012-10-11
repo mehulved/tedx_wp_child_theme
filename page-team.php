@@ -8,32 +8,44 @@
 			
 			<div id="content">
 			
-				<div id="main" class="eight columns clearfix" role="main">
+				<div id="main" class="twelve columns clearfix" role="main">
 
                     <?php
-                    $args = array('post_type' => 'tedx_team');
+                    $args = array('post_type' => 'tedx_team', 'orderby' => 'date', 'order' => 'ASC');
 
                     $loop = new WP_Query($args);
 
 					if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>
 					
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-						
-						<section class="post_content clearfix" itemprop="articleBody">
+                    <div class="team-member twelve columns mobile-four clearfix">
 
-                            <?php the_title('<h2>','</h2>'); 
+                        <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
                             
-                            if (has_post_thumbnail()) {
+                            <section class="post_content clearfix" itemprop="articleBody">
 
-                                the_post_thumbnail('medium');
+                                <?php the_title('<h2>','</h2>'); ?>
+                                
+                                <div class="member-photo three columns">
 
-                            }
+                                    <?php if (has_post_thumbnail()) {
 
-							the_content(); ?>
-					
-						</section> <!-- end article section -->
-						
-					</article> <!-- end article -->
+                                        the_post_thumbnail('medium', array('class' => 'alignleft'));
+
+                                    } ?>
+
+                                </div>
+
+                                <div class="member-description nine columns">
+
+                                    <?php the_content(); ?>
+
+                                </div> <!-- end member description -->
+                        
+                            </section> <!-- end article section -->
+                            
+                        </article> <!-- end article -->
+        
+                    </div>
 					
 					<?php endwhile; ?>		
 					
@@ -41,7 +53,7 @@
 					
 					<article id="post-not-found">
 					    <header>
-					    	<h1>Not Found</h1>
+					    	<h1>No Team members added as yet. Page will be updated soon. Please check again in a few days.</h1>
 					    </header>
 					    <section class="post_content">
 					    	<p>Sorry, but the requested resource was not found on this site.</p>
@@ -53,8 +65,6 @@
 					<?php endif; ?>
 			
 				</div> <!-- end #main -->
-    
-				<?php get_sidebar(); // sidebar 1 ?>
     
 			</div> <!-- end #content -->
 
