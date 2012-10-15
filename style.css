@@ -10,6 +10,10 @@
 
 @import url("../wp-foundation/style.css");
 
+#main {
+    text-align: justify;
+}
+
 .nav-bar > li {
     border: none;
 }
@@ -105,3 +109,17 @@ p a:hover {
 .member-description {
     text-align: justify;
 }
+
+.speaker-bio {
+    display: none;
+}
+
+#sidebar1 > .panel, #sidebar2 > .panel {
+    border-color: #222 !important;
+    border-top: inset;
+    border-bottom: inset;
+    border-left: inset;
+    border-right: inset;
+    border-width: 5px;
+}
+
