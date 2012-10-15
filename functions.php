@@ -98,6 +98,11 @@ function tedx_options_update() {
 }
 add_action('admin_menu', 'tedx_theme_admin_menu');
 
+function tedx_scripts() {
+    wp_enqueue_script('tedx_frontend_script', get_stylesheet_directory_uri() .'/assets/js/tedx_theme-scripts.js', array('jquery'));
+}
+add_action('wp_enqueue_scripts', 'tedx_scripts');
+
 function tedx_admin_scripts() {
     wp_enqueue_script('media-upload');
     wp_enqueue_script('thickbox');
