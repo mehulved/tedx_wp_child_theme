@@ -52,14 +52,7 @@
 					<?php else : ?>
 					
 					<article id="post-not-found">
-					    <header>
-					    	<h1>No Team members added as yet. Page will be updated soon. Please check again in a few days.</h1>
-					    </header>
-					    <section class="post_content">
-					    	<p>Sorry, but the requested resource was not found on this site.</p>
-					    </section>
-					    <footer>
-					    </footer>
+					    	<h3>No Team members added as yet. Page will be updated soon. Please check again in a few days.</h3>
 					</article>
 					
 					<?php endif; ?>
