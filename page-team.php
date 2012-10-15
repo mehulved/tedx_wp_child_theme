@@ -23,13 +23,13 @@
                             
                             <section class="post_content clearfix" itemprop="articleBody">
 
-                                <?php the_title('<h2>','</h2>'); ?>
+                                <?php the_title('<h3>','</h3>'); ?>
                                 
                                 <div class="member-photo three columns">
 
                                     <?php if (has_post_thumbnail()) {
 
-                                        the_post_thumbnail('medium', array('class' => 'alignleft'));
+                                        the_post_thumbnail('medium', array('class' => 'alignleft member-image'));
 
                                     } ?>
 
