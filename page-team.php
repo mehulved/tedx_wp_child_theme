@@ -23,7 +23,7 @@
                             
                             <section class="post_content clearfix" itemprop="articleBody">
 
-                                <?php the_title('<h3>','</h3>'); ?>
+                                <?php the_title('<h3 class="member-name">','</h3>'); ?>
                                 
                                 <div class="member-photo three columns">
 
