@@ -1,7 +1,7 @@
 <?php 
 $args = array(
-    'width'         => 255,
-    'height'        => 60,
+    'width'         => 388,
+    'height'        => 96,
     'default-image' => get_template_directory_uri() . '/images/header.jpg',
     'uploads'       => true
 );
