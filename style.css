@@ -10,8 +10,18 @@
 
 @import url("../wp-foundation/style.css");
 
+@import url(http://fonts.googleapis.com/css?family=Montaga);
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'MuseoSlab500Regular' !important;
+}
+
 #main {
     text-align: justify;
+}
+
+.top-nav {
+    border-radius: 8px;
 }
 
 .nav-bar > li {
@@ -20,6 +30,11 @@
 
 .nav-bar > li:last-child {
     border-right: none;
+}
+
+.nav-bar > li > a:first-child {
+    font-size: 17px;
+    font-family: 'Montaga', serif;
 }
 
 .nav-bar > li:hover {
@@ -86,7 +101,7 @@ ul.tabs.vertical > li > a {
     border-bottom-right-radius: 20px;
     -moz-border-radius-topright: 20px;
     -moz-border-radius-bottomright: 20px;
-    background-color: #FF2A06;
+    background-color: #990000;
     width: 72px;
 }
 
@@ -110,6 +125,16 @@ p a:hover {
     text-align: justify;
 }
 
+.member-name {
+    margin-left: 15px;
+    font-size: 22px;
+    color: #777;
+    font-weight: bold;
+}
+
+.member-image {
+    margin-top: 2px;
+}
 .speaker-bio {
     display: none;
 }
@@ -121,5 +146,9 @@ p a:hover {
     border-left: inset;
     border-right: inset;
     border-width: 5px;
+}
+
+#credit {
+    font-size: 10px;
 }
 
