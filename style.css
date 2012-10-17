@@ -148,7 +148,12 @@ p a:hover {
     border-width: 5px;
 }
 
+.footer {
+    background-color: #990000;
+}
+
 #credit {
     font-size: 10px;
+    color: white;
 }
 

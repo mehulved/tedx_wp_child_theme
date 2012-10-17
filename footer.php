@@ -1,6 +1,6 @@
 			<footer role="contentinfo">
 			
-					<div class="twelve columns">
+					<div class="twelve columns footer">
 
 						<div class="row">
 
@@ -8,6 +8,7 @@
 								<?php bones_footer_links(); ?>
 							</nav>
 
+                            <p class="copyrights three columns">&copy; <?php echo date('Y'); ?> TEDxNMIMS</p>
 							<p class="attribution three columns"><a href="http://github.com/mehulved/tedx_wp_child_theme" id="credit" title="TEDx Wordpress Theme">TEDx Theme for Wordpress</a></p>
 
 						</div>
