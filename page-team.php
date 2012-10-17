@@ -31,6 +31,26 @@
 
                                         the_post_thumbnail('medium', array('class' => 'alignleft member-image'));
 
+                                        if (get_post_meta($post->ID, 'twitter', true) != '' || get_post_meta($post->ID, 'facebook', true) != '' || get_post_meta($post->ID, 'linkedin', true) != '') {
+
+                                            if (get_post_meta($post->ID, 'twitter', true) != '') { ?>
+
+                                                <a href="<?php echo get_post_meta($post->ID, 'twitter', true); ?>">Twitter</a>
+
+                                            <?php } 
+
+                                            if (get_post_meta($post->ID, 'facebook', true) != '') { ?>
+
+                                                <a href="<?php echo get_post_meta($post->ID, 'facebook', true); ?>">Facebook</a>
+
+                                            <?php }
+
+                                            if (get_post_meta($post->ID, 'linkedin', true) != '') { ?>
+
+                                                <a href="<?php echo get_post_meta($post->ID, 'linkedin', true); ?>">LinkedIn</a>
+
+                                            <?php }
+                                        }
                                     } ?>
 
                                 </div>

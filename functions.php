@@ -174,15 +174,78 @@ function tedx_team_custom_post_type() {
             'supports' => array(
                 'title',
                 'editor',
-                'thumbnail'
+                'thumbnail',
             ),
             'has_archive' => false,
             'rewrite' => array(
                 'slug' => 'team'
-            )
+            ),
+            'register_meta_box_cb' => 'tedx_speakers_social_links'
         )
     );
 }
+
+function tedx_speakers_social_links() {
+    add_meta_box('twitter', 'Twitter', 'twitter', 'tedx_team', 'side', 'default');
+    add_meta_box('facebook', 'Facebook', 'facebook', 'tedx_team', 'side', 'default');
+    add_meta_box('linkedin', 'Linkedin', 'linkedin', 'tedx_team', 'side', 'default');
+}
+add_action('add_meta_boxes', 'tedx_speakers_social_links');
+
+function twitter() {
+    global $post;
+    //noncename is required to verify where the data originated
+    echo '<input type="hidden" name="socialmeta_noncename" id="socialmeta_noncename" value="' . wp_create_nonce( plugin_basename(__FILE__)) . '" />';
+    // get the data if it has already been entered
+    $twitter = get_post_meta($post->ID, 'twitter', true);
+    echo '<input type="text" name="twitter" value="' . $twitter . '" class="widefat" />';
+}
+
+function facebook() {
+    global $post;
+    //noncename is required to verify where the data originated
+    echo '<input type="hidden" name="socialmeta_noncename" id="socialmeta_noncename" value="' . wp_create_nonce( plugin_basename(__FILE__)) . '" />';
+    // get the data if it has already been entered
+    $facebook = get_post_meta($post->ID, 'facebook', true);
+    echo '<input type="text" name="facebook" value="' . $facebook . '" class="widefat" />';
+}
+
+function linkedin() {
+    global $post;
+    //noncename is required to verify where the data originated
+    echo '<input type="hidden" name="socialmeta_noncename" id="socialmeta_noncename" value="' . wp_create_nonce( plugin_basename(__FILE__)) . '" />';
+    // get the data if it has already been entered
+    $linkedin = get_post_meta($post->ID, 'linkedin', true);
+    echo '<input type="text" name="linkedin" value="' . $linkedin . '" class="widefat" />';
+}
+
+function tedx_save_meta($post_id, $post) {
+    //first verify if it came from our screen and with proper authorisation because save_post can be automatically triggered too
+    if (!wp_verify_nonce( $_POST['socialmeta_noncename'], plugin_basename(__FILE__))) {
+        return $post->ID;
+    }
+    // Is the user allowed to edit the post
+    if (!current_user_can('edit_post', $post->ID)) {
+        return $post->ID;
+    }
+    //We're authenticated. Find and save the data.
+    $social['twitter'] = $_POST['twitter'];
+    $social['facebook'] = $_POST['facebook'];
+    $social['linkedin'] = $_POST['linkedin'];
+    foreach ($social as $key => $value) {
+        if ($post->post_type == 'revision') return;
+        if (get_post_meta($post->ID, $key, false)) {
+            update_post_meta($post->ID, $key, $value);
+        }
+        else {
+            add_post_meta($post->ID, $key, $value);
+        }
+        if (!value) {
+            delete_post_meta($post->ID, $key);
+        }
+    }
+}
+add_action('save_post', 'tedx_save_meta', 1, 2);
 
 if ( function_exists('add_theme_support')) {
     add_theme_support('post-thumbnail');
