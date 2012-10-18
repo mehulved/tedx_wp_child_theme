@@ -99,8 +99,10 @@ function tedx_options_update() {
 add_action('admin_menu', 'tedx_theme_admin_menu');
 
 function tedx_scripts() {
-    wp_enqueue_script('tedx_frontend_script', get_stylesheet_directory_uri() .'/assets/js/tedx_theme-scripts.js', array('jquery'));
+    wp_enqueue_style('jquery-ui-style', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.0/themes/ui-darkness/jquery-ui.css');
+    wp_enqueue_script('tedx_frontend_script', get_stylesheet_directory_uri() .'/assets/js/tedx_theme-scripts.js', array('jquery','jquery-ui-dialog'));
     wp_enqueue_style('tedx_heading_font', get_stylesheet_directory_uri() .'/assets/fonts/museoslab/stylesheet.css');
+    wp_enqueue_script('jquery_rotator', get_stylesheet_directory_uri() . '/assets/js/jQueryRotateCompressed.2.2.js', array('jquery'));
 }
 add_action('wp_enqueue_scripts', 'tedx_scripts');
 
@@ -247,9 +249,4 @@ function tedx_save_meta($post_id, $post) {
 }
 add_action('save_post', 'tedx_save_meta', 1, 2);
 
-if ( function_exists('add_theme_support')) {
-    add_theme_support('post-thumbnail');
-    set_post_thumbnail_size(150,150);
-    add_image_size('medium',300,300);
-}
 ?>

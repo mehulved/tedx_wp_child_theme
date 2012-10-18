@@ -121,6 +121,10 @@ p a:hover {
     border-bottom: red 1px solid;
 }
 
+.team-member:last-child {
+    border: none;
+}
+
 .member-description {
     text-align: justify;
 }
@@ -135,21 +139,32 @@ p a:hover {
 .member-photo {
     padding: 5px;
     background: #222;
+    overflow: auto;
 }
 
-.member-image {
-    margin-top: 2px;
+#main img.member-image {
+    margin: 0px;
 }
 
 .member-social {
     width: 100%;
+    margin-top: 10px;
 }
 
 .member-twitter, .member-fb {
     margin-right: 10px;
 }
 
-.speaker-bio {
+.speaker-image {
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+.speaker-name {
+    clear: both;
+}
+
+.speaker-content {
     display: none;
 }
 

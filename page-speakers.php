@@ -8,10 +8,10 @@
 			
 			<div id="content">
 			
-				<div id="main" class="eight columns clearfix" role="main">
+				<div id="main" class="twelve columns clearfix" role="main">
 
                     <?php
-                    $args = array('post_type' => 'tedx_speakers');
+                    $args = array('post_type' => 'tedx_speakers', 'orderby' => 'name', 'order' => 'ASC', 'posts_per_page' => -1);
 
                     $loop = new WP_Query($args);
 
@@ -19,19 +19,31 @@
 					
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						
-						<section class="post_content clearfix" itemprop="articleBody">
+                        <div class="speaker four columns clearfix">
 
-                            <?php the_title('<h2>','</h2>'); 
+                            <section class="post_content clearfix" itemprop="articleBody">
+
+                                <?php if (has_post_thumbnail()) { ?>
+
+                                    <div class="speaker-photo" id="post-<?php the_ID(); ?>">
+
+                                        <?php the_post_thumbnail(array(150,200), array('class' => 'alignleft speaker-image', 'id' => 'post-' . $post->ID )); ?>
+
+                                    </div>
+
+                                <?php }
+
+                                the_title('<h3 class="speaker-name">','</h3>'); ?>
+
+                                    <div class="speaker-content" id="post-<?php the_ID(); ?>" title="<?php the_title(); ?>">
+
+                                    <?php the_content(); ?>
+
+                                </div>
+
+                            </section> <!-- end article section -->
                             
-                            if (has_post_thumbnail()) {
-
-                                the_post_thumbnail('medium');
-
-                            }
-
-							the_content(); ?>
-					
-						</section> <!-- end article section -->
+                        </div> <!-- end speaker block -->
 						
 					</article> <!-- end article -->
 					
@@ -40,21 +52,12 @@
 					<?php else : ?>
 					
 					<article id="post-not-found">
-					    <header>
-					    	<h1>Not Found</h1>
-					    </header>
-					    <section class="post_content">
-					    	<p>Sorry, but the requested resource was not found on this site.</p>
-					    </section>
-					    <footer>
-					    </footer>
-					</article>
+					    	<h3>No Speaker added as yet. Page will be updated soon. Please check again in a few days.</h3>
+                    </article>
 					
 					<?php endif; ?>
 			
 				</div> <!-- end #main -->
-    
-				<?php get_sidebar(); // sidebar 1 ?>
     
 			</div> <!-- end #content -->
 
