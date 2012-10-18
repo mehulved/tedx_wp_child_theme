@@ -31,26 +31,30 @@
 
                                         the_post_thumbnail('medium', array('class' => 'alignleft member-image'));
 
-                                        if (get_post_meta($post->ID, 'twitter', true) != '' || get_post_meta($post->ID, 'facebook', true) != '' || get_post_meta($post->ID, 'linkedin', true) != '') {
+                                        if (get_post_meta($post->ID, 'twitter', true) != '' || get_post_meta($post->ID, 'facebook', true) != '' || get_post_meta($post->ID, 'linkedin', true) != '') { ?>
 
-                                            if (get_post_meta($post->ID, 'twitter', true) != '') { ?>
+                                            <div class="member-social">
 
-                                                <a href="<?php echo get_post_meta($post->ID, 'twitter', true); ?>">Twitter</a>
+                                                <?php if (get_post_meta($post->ID, 'twitter', true) != '') { ?>
 
-                                            <?php } 
+                                                    <a href="<?php echo get_post_meta($post->ID, 'twitter', true); ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/images/team-twitter.png'; ?>" alt="twitter profile" class="member-twitter" /></a>
 
-                                            if (get_post_meta($post->ID, 'facebook', true) != '') { ?>
+                                                <?php } 
 
-                                                <a href="<?php echo get_post_meta($post->ID, 'facebook', true); ?>">Facebook</a>
+                                                if (get_post_meta($post->ID, 'facebook', true) != '') { ?>
 
-                                            <?php }
+                                                    <a href="<?php echo get_post_meta($post->ID, 'facebook', true); ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/images/team-fb.png'; ?>" alt="facebook profile" class="member-fb" /></a>
 
-                                            if (get_post_meta($post->ID, 'linkedin', true) != '') { ?>
+                                                <?php }
 
-                                                <a href="<?php echo get_post_meta($post->ID, 'linkedin', true); ?>">LinkedIn</a>
+                                                if (get_post_meta($post->ID, 'linkedin', true) != '') { ?>
 
-                                            <?php }
-                                        }
+                                                    <a href="<?php echo get_post_meta($post->ID, 'linkedin', true); ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/images/team-linkedin.png'; ?>" alt="linkedin profile" class="member-linkedin" /></a>
+
+                                                <?php } ?>
+                                            </div>
+                                        <?php }
+
                                     } ?>
 
                                 </div>

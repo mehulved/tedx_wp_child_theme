@@ -135,6 +135,15 @@ p a:hover {
 .member-image {
     margin-top: 2px;
 }
+
+.member-social {
+    width: 100%;
+}
+
+.member-twitter, .member-fb {
+    margin-right: 10px;
+}
+
 .speaker-bio {
     display: none;
 }
