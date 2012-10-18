@@ -132,6 +132,11 @@ p a:hover {
     font-weight: bold;
 }
 
+.member-photo {
+    padding: 5px;
+    background: #222;
+}
+
 .member-image {
     margin-top: 2px;
 }
