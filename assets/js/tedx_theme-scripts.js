@@ -4,11 +4,11 @@ jQuery(document).ready(function($) {
     });
     var rotation = 10;
 
-    $('.post_content').rotate(rotation);
-    $('.post_content').mouseover(function() {
+    $('.post_speakers').rotate(rotation);
+    $('.post_speakers').mouseover(function() {
         $(this).rotate(0);
     });
-    $('.post_content').mouseout(function() {
+    $('.post_speakers').mouseout(function() {
         $(this).rotate(rotation);
     });
     $('.speaker-image').click(function() {

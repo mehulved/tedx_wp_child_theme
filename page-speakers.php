@@ -21,7 +21,7 @@
 						
                         <div class="speaker four columns clearfix">
 
-                            <section class="post_content clearfix" itemprop="articleBody">
+                            <section class="post_content clearfix post_speakers" itemprop="articleBody">
 
                                 <?php if (has_post_thumbnail()) { ?>
 
