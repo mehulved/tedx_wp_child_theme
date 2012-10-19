@@ -13,6 +13,6 @@ jQuery(document).ready(function($) {
     });
     $('.speaker-image').click(function() {
         var img_id = $(this).attr('id');
-        $('.speaker-content#' + img_id).dialog({width:950});
+        $('.speaker-content#' + img_id).dialog({width:600, height:400});
     });
 });

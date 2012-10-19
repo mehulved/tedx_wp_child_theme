@@ -41,21 +41,21 @@
 
                                         <div class="member-social">
 
-                                            <?php if (get_post_meta($post->ID, 'twitter', true) != '') { ?>
-
-                                                <a href="<?php echo get_post_meta($post->ID, 'twitter', true); ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/images/team-twitter.png'; ?>" alt="twitter profile" class="member-twitter" /></a>
-
-                                            <?php } 
-
-                                            if (get_post_meta($post->ID, 'facebook', true) != '') { ?>
+                                            <?php if (get_post_meta($post->ID, 'facebook', true) != '') { ?>
 
                                                 <a href="<?php echo get_post_meta($post->ID, 'facebook', true); ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/images/team-fb.png'; ?>" alt="facebook profile" class="member-fb" /></a>
 
-                                            <?php }
+                                            <?php } ?>
 
-                                            if (get_post_meta($post->ID, 'linkedin', true) != '') { ?>
+                                            <?php if (get_post_meta($post->ID, 'linkedin', true) != '') { ?>
 
                                                 <a href="<?php echo get_post_meta($post->ID, 'linkedin', true); ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/images/team-linkedin.png'; ?>" alt="linkedin profile" class="member-linkedin" /></a>
+
+                                            <?php } ?>
+
+                                            <?php if (get_post_meta($post->ID, 'twitter', true) != '') { ?>
+
+                                                <a href="<?php echo get_post_meta($post->ID, 'twitter', true); ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/images/team-twitter.png'; ?>" alt="twitter profile" class="member-twitter" /></a>
 
                                             <?php } ?>
 
