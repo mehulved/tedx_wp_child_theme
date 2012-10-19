@@ -75,6 +75,41 @@ function tedx_options_page() {
                     <input type="text" id="upload_image5_text" size="36" name="upload_image[]" value="<?php echo $slider_images[4]; ?>" />
                     <input type="button" id="upload_image5" class="upload_button" value="Upload Image" />
                 </p>
+                <p id="slider6" class="slider">
+                    <label for="upload_image6">
+                        Image 6:
+                    </label>
+                    <input type="text" id="upload_image6_text" size="36" name="upload_image[]" value="<?php echo $slider_images[5]; ?>" />
+                    <input type="button" id="upload_image6" class="upload_button" value="Upload Image" />
+                </p>
+                <p id="slider7" class="slider">
+                    <label for="upload_image7">
+                        Image 7:
+                    </label>
+                    <input type="text" id="upload_image7_text" size="36" name="upload_image[]" value="<?php echo $slider_images[6]; ?>" />
+                    <input type="button" id="upload_image7" class="upload_button" value="Upload Image" />
+                </p>
+                <p id="slider8" class="slider">
+                    <label for="upload_image8">
+                        Image 8:
+                    </label>
+                    <input type="text" id="upload_image8_text" size="36" name="upload_image[]" value="<?php echo $slider_images[7]; ?>" />
+                    <input type="button" id="upload_image8" class="upload_button" value="Upload Image" />
+                </p>
+                <p id="slider9" class="slider">
+                    <label for="upload_image9">
+                        Image 9:
+                    </label>
+                    <input type="text" id="upload_image9_text" size="36" name="upload_image[]" value="<?php echo $slider_images[8]; ?>" />
+                    <input type="button" id="upload_image9" class="upload_button" value="Upload Image" />
+                </p>
+                <p id="slider10" class="slider">
+                    <label for="upload_image10">
+                        Image 10:
+                    </label>
+                    <input type="text" id="upload_image10_text" size="36" name="upload_image[]" value="<?php echo $slider_images[9]; ?>" />
+                    <input type="button" id="upload_image10" class="upload_button" value="Upload Image" />
+                </p>
             </div>
         <input type="submit" name="search" value="Update Theme Options" class="button" />
     </form>
