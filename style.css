@@ -69,6 +69,10 @@ ul.tabs.vertical > li > a {
     color: #FFFFFF;
 }
 
+#main img.orbit-slide {
+    margin-bottom: 0;
+}
+
 .sidebar-list {
     list-style-type: none;
 }

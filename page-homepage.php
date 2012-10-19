@@ -45,7 +45,6 @@ Template Name: Homepage
 						<script type="text/javascript">
 						   $(window).load(function() {
 						       $('#featured').orbit({ 
-						       	fluid: '16x6'
 						       });
 						   });
 						</script>
