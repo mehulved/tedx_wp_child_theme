@@ -27,15 +27,17 @@ Template Name: Homepage
                                 
                                 $slider_images = get_option('tedx_slider_images', get_stylesheet_directory_uri() . '/images/tedx.png');
 
-                                foreach ($slider_images as $image) {
+                                if (count($slider_images) > 0) {
+                                    foreach ($slider_images as $image) {
 
-                                    if ($image != '') {
-                            ?>
-                                        <img src="<?php echo $image; ?>" />
-                    
-                            <?php
+                                        if ($image != '') {
+                                ?>
+                                            <img src="<?php echo $image; ?>" />
+                        
+                                <?php
+                                        }
+                
                                     }
-            
                                 }
                             ?>
 							</div>
