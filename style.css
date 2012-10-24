@@ -173,8 +173,7 @@ p a:hover {
 }
 
 #sidebar1 > .panel, #sidebar2 > .panel {
-    border-color: #222 !important;
-    border-width: 5px;
+    border-width: 0px;
 }
 
 .footer {
