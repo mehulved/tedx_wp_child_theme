@@ -180,8 +180,15 @@ p a:hover {
     background-color: #990000;
 }
 
+.footer p {
+    font-size: 13px;
+}
+
 #credit {
     font-size: 10px;
     color: white;
 }
 
+.ted-licensed {
+    float: left;
+}

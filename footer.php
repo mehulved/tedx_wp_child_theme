@@ -8,9 +8,9 @@
 								<?php bones_footer_links(); ?>
 							</nav>
 
-                            <p class="copyrights three columns">&copy; <?php echo date('Y'); ?> TEDxNMIMS</p>
-							<p class="attribution three columns"><a href="http://github.com/mehulved/tedx_wp_child_theme" id="credit" title="TEDx Wordpress Theme">TEDx Theme for Wordpress</a></p>
-
+                            <p class="copyrights twelve columns">&copy; <?php echo date('Y'); ?> TEDxNMIMS</p>
+                            <p class="ted-licensed six columns"> <?php bloginfo('name'); ?> is an independent TEDx event operated under license from TED.</p>
+							<p class="attribution three columns"><a href="http://mehulved.github.com/tedx_wp_child_theme" id="credit" title="TEDx Wordpress Theme">TEDx Theme for Wordpress</a></p>
 						</div>
 
 					</div>
