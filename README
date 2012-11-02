@@ -1,5 +1,28 @@
-This is a child theme of wp-foundation by 320press. It can be availed from https://github.com/320press/wordpress-foundation. 
-This theme won't work without wp-foundation, so get that before activating this theme.
+This is a child theme of wp-foundation by 320press. wp-foundation can be downloaded from https://github.com/320press/wordpress-foundation. 
+This theme won't work without wp-foundation, so get it before activating this theme.
 
-To display list of speakers, create a page for speakers, select template Speakers from the edit page view. Then add speakers from the Speakers menu. Follow the same steps for team.
+**Features**
+* Responsive Design.
+* Image gallery for which images can be uploaded from Options Page in the dashboard.
+* Social Media buttons in the sidebar. URL for these buttons can be entered from the Options Page in the dashboard.
+* Colours can be chosen for sidebar, footer, text and navigation.
+* Custom header image option.
+* Custom Post Types for Speakers and Teams so you don't have to design your own layout. Just create New Speaker or New Member and it will show up in a well designed format on the website.
+* Twitter, LinkedIn and Facebook Profile links feature for Team Members is available.
 
+** How to add Speakers **
+- Log in to Dashboard.
+- Go to Speakers -> New Speaker.
+- Enter Speaker Name in the Title box. Enter speaker description in the content box. The description will be displayed in a pop up box on the speakers page.
+- Click on Set Featured Image button, upload image and set it as featured image to display the speaker's image.
+- Click Publish to display the speaker on the website.
+- Repeat steps 2-5 for every new speaker.
+
+** How to add Team Members **
+- Log in to Dashboard
+- Go to Team -> New Member.
+- Enter the Team Members name in the Title box. Enter profile in the content box.
+- Enter full twitter, facebook and linkedin profile link to display on the Team page. If you don't want to show any of the profiles, leave the box empty.
+- To display Member's Image, click on Set Featured Image button, upload image and set it as featured image.
+- Click on Publish to display the member on Team page.
+- Repeat steps 2-6 for every new member.
