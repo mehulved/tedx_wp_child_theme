@@ -10,7 +10,7 @@ This theme won't work without wp-foundation, so get it before activating this th
 * Custom Post Types for Speakers and Teams so you don't have to design your own layout. Just create New Speaker or New Member and it will show up in a well designed format on the website.
 * Twitter, LinkedIn and Facebook Profile links feature for Team Members is available.
 
-** How to add Speakers **
+**How to add Speakers**
 - Log in to Dashboard.
 - Go to Speakers -> New Speaker.
 - Enter Speaker Name in the Title box. Enter speaker description in the content box. The description will be displayed in a pop up box on the speakers page.
@@ -18,7 +18,7 @@ This theme won't work without wp-foundation, so get it before activating this th
 - Click Publish to display the speaker on the website.
 - Repeat steps 2-5 for every new speaker.
 
-** How to add Team Members **
+**How to add Team Members**
 - Log in to Dashboard
 - Go to Team -> New Member.
 - Enter the Team Members name in the Title box. Enter profile in the content box.
