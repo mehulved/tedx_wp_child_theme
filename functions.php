@@ -34,6 +34,10 @@ function tedx_options_page() {
                 <label for="sidebar_background_colour">Sidebar Background Color:</label>
                 <input type="text" id="sidebar_background_colour" name="tedx_sidebar_background" value="<?php echo get_option('tedx_sidebar_background'); ?>" />
             </p>
+            <p id="footer_background">
+                <label for="footer_background_colour">Footer Background Color:</label>
+                <input type="text" id="footer_background_colour" name="tedx_footer_background" value="<?php echo get_option('tedx_footer_background'); ?>" />
+            </p>
             <div id="image_slider">
             <?php
             $slider_images = get_option('tedx_slider_images');
@@ -128,6 +132,9 @@ function tedx_options_update() {
     }
     if ($_POST['tedx_sidebar_background'] != '') {
         update_option('tedx_sidebar_background', $_POST['tedx_sidebar_background']);
+    }
+    if ($_POST['tedx_footer_background'] != '') {
+        update_option('tedx_footer_background', $_POST['tedx_footer_background']);
     }
     update_option('tedx_slider_images', $_POST['upload_image']);
 }

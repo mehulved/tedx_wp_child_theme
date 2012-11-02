@@ -129,7 +129,14 @@
                     background-color: ' . $sidebar_background . ';
             }';
         }
-						
+        $footer_background = get_option('tedx_footer_background');
+        if ($footer_background) {
+            $theme_options_styles .= '
+                .footer {
+                    background-color: ' . $sidebar_background . ';
+            }';
+        }
+
 		if($theme_options_styles){
 			echo '<style>' 
 			. $theme_options_styles . '
